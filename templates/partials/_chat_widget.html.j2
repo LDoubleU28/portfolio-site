@@ -1,0 +1,23 @@
+<button id="chat-launch" class="chat-launch" aria-label="Ask my CV">
+  <img src="/assets/img/logo.svg" alt="" /> Ask my CV
+</button>
+<div id="chat-panel" class="chat-panel">
+  <div class="chat-head">
+    <span><img src="/assets/img/logo.svg" alt="" /> Ask my CV</span>
+    <button id="chat-close" aria-label="Close">&times;</button>
+  </div>
+  <div id="chat-log" class="chat-log">
+    <div class="chat-msg bot">Hi. Ask me anything about Lizzy's work, experience, or leadership.</div>
+    <div class="chat-suggest">
+      <button>What did she build, and what did it save?</button>
+      <button>Does she have product and management experience?</button>
+      <button>Walk me through the path to durable infra.</button>
+    </div>
+  </div>
+  <form id="chat-form" class="chat-form">
+    <input id="chat-input" type="text" placeholder="Ask a question..." autocomplete="off" maxlength="1000" />
+    <button type="submit" aria-label="Send">&rarr;</button>
+  </form>
+  <div class="chat-foot">Built on the Claude API; answers come only from this site's content.</div>
+</div>
+<script src="/assets/js/chat.js?v={{ asset_version }}" defer></script>

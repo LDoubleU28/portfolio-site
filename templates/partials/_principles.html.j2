@@ -1,0 +1,11 @@
+{% if profile.design_principles %}
+<div class="section" id="approach">
+  <div class="h2">How I build</div>
+  <div class="lede">{{ profile.design_principles.lede }}</div>
+  <div class="rigor">
+    {% for it in profile.design_principles['items'] %}
+    <div><div class="h">{{ it.h }}</div><div class="p">{{ it.p }}</div></div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

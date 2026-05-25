@@ -1,0 +1,72 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="section">
+  <a class="backlink" href="/#work">&#8592; Back to work</a>
+  <div class="meta" style="text-transform:uppercase;letter-spacing:.06em;font-size:12px;color:var(--ink3)">{{ case_brain.kicker }}</div>
+  <h1 class="caseh1">Case Study - The <span class="hl">Brain</span></h1>
+  <p class="caselede">{{ case_brain.summary }}</p>
+
+  {% if case_brain.stats %}
+  <div class="stats casestats">
+    {% for s in case_brain.stats %}<div class="stat"><div class="n">{{ s.n }}</div><div class="k">{{ s.k }}</div></div>{% endfor %}
+  </div>
+  {% endif %}
+
+  {% if case_brain.loom %}
+  <div class="loomwrap"><iframe src="{{ case_brain.loom }}" frameborder="0" allowfullscreen></iframe></div>
+  {% else %}
+  <div class="casethumb">Demo video (drop-in)</div>
+  {% endif %}
+
+  {% if case_brain.since_demo %}
+  <div class="sincebox">
+    <div class="sincehd">{{ case_brain.since_demo.title }}</div>
+    <ul>{% for b in case_brain.since_demo.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+  </div>
+  {% endif %}
+
+  {% if case_brain.diagram %}
+  <div class="h2">Architecture</div>
+  <div class="diagram">
+    <div class="dlabel">Sources</div>
+    <div class="dchips">{% for s in case_brain.diagram.sources %}<span class="dchip">{{ s }}</span>{% endfor %}</div>
+    <div class="darrow">&#8595;</div>
+    <div class="dcore">
+      <div class="dcore-title">{{ case_brain.diagram.core_title }}</div>
+      <ul>{% for c in case_brain.diagram.core %}<li>{{ c }}</li>{% endfor %}</ul>
+    </div>
+    <div class="darrow">&#8595;</div>
+    <div class="dlabel">Surfaces</div>
+    <div class="dchips">{% for s in case_brain.diagram.surfaces %}<span class="dchip dchip-clay">{{ s }}</span>{% endfor %}</div>
+    <div class="dband">{{ case_brain.diagram.eval_note }}</div>
+  </div>
+  {% endif %}
+
+  {% for s in case_brain.sections %}
+  <div class="casesec">
+    <div class="h2">{{ s.h }}</div>
+    <p>{{ s.body }}</p>
+    {% if s.bullets %}<ul class="caselist">{% for b in s.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+  {% endfor %}
+
+  {% if case_brain.infra %}
+  <div class="casesec">
+    <div class="h2">{{ case_brain.infra.title }}</div>
+    <div class="infragrid">
+      <div class="infracol">
+        <div class="infh">Today</div>
+        <ul>{% for i in case_brain.infra.current %}<li>{{ i }}</li>{% endfor %}</ul>
+      </div>
+      <div class="infraarrow">&#8594;</div>
+      <div class="infracol infracol-target">
+        <div class="infh">Durable infra</div>
+        <ul>{% for i in case_brain.infra.target %}<li>{{ i }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="casestack"><span class="k">Stack</span> {{ case_brain.stack }}</div>
+</section>
+{% endblock %}

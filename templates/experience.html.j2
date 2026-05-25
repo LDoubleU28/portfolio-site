@@ -1,0 +1,24 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="section">
+  <div class="h2">Experience</div>
+  <div class="lede">{{ experience.intro }}</div>
+  <div class="xp">
+    {% for r in experience.roles %}
+    <div class="xprow">
+      <div class="xpmeta">
+        <div class="xpperiod">{{ r.period }}</div>
+        <div class="xpsector">{{ r.sector }}</div>
+      </div>
+      <div class="xpbody">
+        <h3>{{ r.org }}{% if r.url %} <a class="orglink" href="{{ r.url }}" target="_blank" rel="noopener" aria-label="{{ r.org }} website">&#8599;</a>{% endif %}</h3>
+        <div class="xptitle">{{ r.title }}</div>
+        <ul>{% for p in r.points %}<li>{{ p }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="h2" style="margin-top:44px">Education</div>
+  <ul class="edu">{% for e in experience.education %}<li>{{ e }}</li>{% endfor %}</ul>
+</section>
+{% endblock %}

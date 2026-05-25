@@ -1,0 +1,48 @@
+- id: brain
+  featured: true
+  link: "/brain"
+  name: "The Brain"
+  type: "Company operating system"
+  meta: "Selected work; company intelligence"
+  one_line: "A grounded company-intelligence operating system over Slack, HubSpot, Notion, Drive, and onchain data."
+  arc:
+    Problem: "Commercial truth sat in six systems. Every deal or product question required manual reconciliation of lagging, conflicting sources."
+    Built: "An MCP server with role-based tools, a 21-file grounded knowledge base, provenance tagging, and PII guardrails. Shipped as a Claude Code plugin, with standardized SOPs and a central index."
+    "In use": "An autonomous Slack agent answers company questions on an hourly loop. Fail-closed gating; every claim carries a source; every write is audit-logged."
+    Measured: "An eval suite (in CI) converts four real past failures into regression tests, run on every commit. Per-skill cost attribution."
+  media: { type: slot, label: "90-second demo / architecture diagram" }
+- id: ai-ops
+  name: "AI Operations Analytics"
+  type: "Spend, adoption & ROI"
+  one_line: "One dashboard quantifying company-wide AI spend and tool adoption: per-tool/team cost attribution, seat utilization, an adoption matrix, three reduction scenarios, and a self-corrected unit-economics reprice. Admin-gated, privacy-by-design."
+  result: "3 scenarios; six- to seven-figure spend modeled"
+- id: strategy
+  name: "Strategy & Market Analysis"
+  type: "Strategy & revenue analysis"
+  one_line: "Market sizing (TAM/SAM) and revenue modeling for new product and enterprise lines, company metrics reviews and board reporting, and opportunity analysis that shapes where the business invests and how it grows."
+  result: "shaped enterprise + new-revenue strategy"
+- id: onchain-analytics
+  name: "Onchain Analytics Agent"
+  type: "NL to SQL agent"
+  one_line: "Natural-language onchain analytics: 4 databases, 77 metrics, 76 auto-synced schemas, shipped web UI. Saves 20+ hours/week per analyst."
+  result: "76+ tables wired"
+- id: decision-intelligence
+  name: "Decision Intelligence"
+  type: "Agentic workflow"
+  one_line: "Human-in-the-loop pipeline logging and scoring decisions into a governed ledger; SOP-driven, audit-trailed, in-place writes; templated across 30+ accounts."
+  result: "30+ accounts; HITL gate"
+- id: autonomous-agent
+  name: "Autonomous Slack Agent"
+  type: "Autonomous agent"
+  one_line: "Guardrail engineering for a publicly-posting agent: hours-gating, fail-closed logic, anti-hallucination evals."
+  result: "eval-gated"
+- id: briefs
+  name: "Per-Role Weekly Briefs"
+  type: "Generation / HITL"
+  one_line: "Audience-tailored briefs in each leader's register; gather-once, serve-many; scheduled, with a human approving each draft before it sends."
+  result: "3 live briefs"
+- id: durable-infra
+  name: "Path to durable infra"
+  type: "Case study"
+  one_line: "How the running systems move from a local runner to durable cloud infra: Cloud Run + Scheduler, Secret Manager, a Postgres + pgvector context store, evals gating deploys in CI."
+  result: "systems thinking"

@@ -1,0 +1,6 @@
+[build]
+  publish = "build/neutral"
+  command = "python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt && python -m pytest -q && python scripts/build_kb.py && python build.py --theme neutral --tier public --out build/neutral && python checks/leak_gate.py build/neutral"
+
+[functions]
+  directory = "netlify/functions"

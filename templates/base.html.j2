@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ profile.name }} · {{ page_title }}</title>
+<link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+<link rel="stylesheet" href="/themes/tokens.css?v={{ asset_version }}" />
+<link rel="stylesheet" href="/themes/{{ theme }}.css?v={{ asset_version }}" />
+</head>
+<body>
+{% include "partials/_nav.html.j2" %}
+<main class="wrap">{% block content %}{% endblock %}</main>
+{% include "partials/_footer.html.j2" %}
+{% include "partials/_chat_widget.html.j2" %}
+</body>
+</html>

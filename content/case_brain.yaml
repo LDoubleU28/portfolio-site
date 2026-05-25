@@ -1,0 +1,49 @@
+title: "The Brain"
+kicker: "Company-intelligence operating system"
+loom: "https://www.loom.com/embed/19366881493d464792fe4a8519d88e1a"
+since_demo:
+  title: "Since this demo"
+  bullets:
+    - "The video above is an early version. Since then the Brain became an operating system, not just a question-answering bot."
+    - "Hardened reliability: an eval suite now gates every change (static guards on each commit, behavioral tests built from real past failures), and the autonomous agent is fail-closed and hours-gated."
+    - "Spun-out agents and skills: the same grounded patterns now power per-role weekly briefs and a human-in-the-loop decision-log automation pipeline; it went from answers to a suite of agents."
+    - "Productized toward shared infrastructure: moving off a single local runner toward a shared context store (ingest once, serve many) so many agents read one grounded snapshot instead of querying every source live."
+    - "Broader coverage: more data sources, knowledge-base files, and warehouse tables wired in."
+summary: "A grounded company-intelligence operating system over Slack, HubSpot, Notion, Drive, and onchain data: an MCP server with role-filtered tools, a curated knowledge base, an autonomous Slack agent, and an eval suite that gates every change."
+stats:
+  - { n: "35+", k: "data sources grounded" }
+  - { n: "21", k: "knowledge-base files" }
+  - { n: "4 DBs", k: "one read-only query layer" }
+  - { n: "eval-gated", k: "on every commit" }
+diagram:
+  sources: ["Slack", "HubSpot", "Notion", "Drive", "Contracts", "BigQuery / Trino / Postgres / ClickHouse"]
+  core_title: "The Brain (MCP server)"
+  core:
+    - "Curated knowledge base: entity model, source registry, personas, terminology, routing"
+    - "Role-filtered tools + a read-only query layer over four databases"
+    - "Provenance tagging, PII guardrails, and a source-tier hierarchy (live data outranks snapshots)"
+  surfaces: ["Autonomous Slack agent (hourly, fail-closed)", "Claude Code plugin", "Sourced reports and briefs"]
+  eval_note: "An eval suite gates every change: static guards on each commit, behavioral cases on prompt or knowledge changes."
+infra:
+  title: "From local runner to durable infra"
+  current: ["Scheduled loops on a laptop", "Secrets in local files", "Agents query source APIs live each run"]
+  target: ["Serverless jobs on a scheduler", "Secrets in a managed store", "A Postgres + pgvector context store; ingest once, serve many", "Evals gating deploys in CI, with alerting and a runbook"]
+sections:
+  - h: "The problem"
+    body: "Commercial truth lived in six systems: a CRM, Slack, a docs workspace, a knowledge base, signed contracts, and a data warehouse. Every deal, product, or metrics question meant a person manually reconciling lagging, conflicting sources, and the answer changed depending on who you asked. There was no single grounded context layer."
+  - h: "What I built"
+    body: "An MCP server that exposes the company's operating context through a small set of role-filtered tools, backed by a curated, versioned knowledge base: an entity model, the product hierarchy, a source registry, personas, terminology, and routing rules. Every answer carries provenance, and a source-tier hierarchy ensures live first-party data outranks stale snapshots. PII and confidential terms are guarded at the system layer. Shipped as a Claude Code plugin and a standalone MCP server."
+    bullets:
+      - "MCP server with role-based tool filtering and provenance tagging"
+      - "Curated knowledge base: entity model, product hierarchy, source registry, personas, terminology"
+      - "Read-only query layer over BigQuery, Trino, Postgres, and ClickHouse"
+      - "Source-tier hierarchy: live first-party data outranks supplementary research"
+  - h: "How it is deployed"
+    body: "An autonomous Slack agent answers company questions on an hourly loop. It is fail-closed and hours-gated, replies only when asked, posts as a dedicated identity, and signals its state with reactions. Every claim links to its source, and sensitive terms are redacted by rule."
+  - h: "Reliability and evals"
+    body: "An eval suite turns real production failures into automated regression tests. Static guards run on every commit at no API cost; behavioral cases run on prompt or knowledge changes and gate deploys. Four documented past failures (a style-rule leak, a name hallucination, a stale-owner error, and treating a signed deal as live) each became a permanent test."
+  - h: "Operating rigor"
+    body: "Standardized SOPs with a central index, human-in-the-loop approval for any write to a system of record, audit-trail logging on every write, in-place document edits so links never break, and per-skill cost attribution."
+  - h: "Path to durable infra"
+    body: "It runs today on a local runner. The path to durable production: secrets into a managed secret store, the scheduled loops onto serverless jobs behind a scheduler, a Postgres and pgvector context store so agents read an ingested snapshot instead of hammering source APIs, and evals gating deploys in CI with alerting and a runbook."
+stack: "Python; Claude API; MCP; BigQuery / Trino / Postgres / ClickHouse; pytest; pre-commit eval gating"

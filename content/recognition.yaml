@@ -1,0 +1,18 @@
+- id: q-intel
+  text: "You saved me; the weekly intel has been very useful."
+  broadened_role: "a senior program leader, in a company All-Hands shout-out"
+- id: q-meeting
+  text: "Really amazing meeting."
+  broadened_role: "a marketing leader, after a business review she ran"
+- id: q-scaffold
+  text: "She has scaffolded a lot already."
+  broadened_role: "a data scientist, pointing colleagues to the systems she built"
+- id: q-culture
+  text: "She goes above and beyond to build our culture and connect with partners; it is valued, recognized, and appreciated throughout the org."
+  broadened_role: "a senior executive, in her performance review"
+- id: q-leader
+  text: "A key people leader in the company, one of the best at organizing folks into action, often outside her mandate."
+  broadened_role: "a staff product manager"
+- id: q-okr
+  text: "A very helpful way to track progress towards our OKRs."
+  broadened_role: "a solutions engineering lead, on the org-wide scorecard she built"

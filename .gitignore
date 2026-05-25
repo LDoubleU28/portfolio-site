@@ -1,0 +1,9 @@
+build/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.netlify/
+content_internal/
+netlify/functions/lib/knowledge.mjs

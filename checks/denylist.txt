@@ -1,0 +1,15 @@
+# checks/denylist.txt
+# Committed leak-gate denylist. One forbidden term per line.
+# Matching is case-insensitive and on word boundaries.
+# Lines starting with '#' and blank lines are ignored.
+#
+# Add the REAL names, former employers, customers, or any private term that must
+# never appear in a public build. These ship in the repo and are enforced on
+# every build, independent of the git-ignored content_internal/ directory.
+#
+# The seed entries below are generic placeholders that demonstrate the format.
+# Replace or extend them with your own forbidden tokens.
+
+# --- placeholder forbidden tokens (examples; replace with real ones) ---
+Acme Former Employer
+Confidential Customer Inc

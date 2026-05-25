@@ -1,0 +1,21 @@
+@font-face{font-family:'Inter';src:url('/assets/fonts/inter-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Inter';src:url('/assets/fonts/inter-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url('/assets/fonts/inter-600.woff2') format('woff2');font-weight:600;font-display:swap}
+:root{
+  --bg:#ffffff; --cream:#f7f7f8; --char:#0d0d0d; --clay:#0b69ff;
+  --hl:linear-gradient(100deg,#ffddc2,#ffcfe6,#e2d6ff,#cfe6ff);
+  --line:#e6e6e9; --line2:#f1f1f3;
+  --ink2:#353740; --ink3:#6e6e80;
+  --thumb:linear-gradient(120deg,#ffe3cc,#ffd1ea,#e0d4ff,#cfe6ff);
+  --font-head:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+  --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+}
+/* airy display headings, medium-weight subheads */
+.hero h1{font-weight:400;letter-spacing:-.02em}
+.caseh1{font-weight:400;letter-spacing:-.02em}
+.brand,.h2,.feat h3,.card h4,.sincehd,.dcore-title,.footbrand .fname,.infh,.twork th{font-weight:600}
+/* generic keeps the LA mark: give the wide logo room inside the round chat avatar */
+.chat-launch img{padding:4px}
+.chat-head img{padding:4px}
+/* white footer credit mark on the dark footer */
+.fbuilt img{filter:brightness(0) invert(1)}

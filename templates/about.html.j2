@@ -1,0 +1,10 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="section">
+  <div class="aboutbio aboutbio-wide">
+    <div class="h2">About</div>
+    {% for para in about.bio %}<p>{{ para }}</p>{% endfor %}
+  </div>
+</section>
+{% include "partials/_principles.html.j2" %}
+{% endblock %}

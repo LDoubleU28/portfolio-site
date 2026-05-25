@@ -1,0 +1,36 @@
+lede: "Recognized across the org as a cross-team people leader. I run the same operating model across agents and people: clear scope, defined interfaces, guardrails, review."
+pillars:
+  - title: "Build and lead high-performing teams"
+    tag: "Built from zero, twice"
+    body: "I built the data function from the ground up at both OP Labs and theSkimm, and I lead and manage data engineering, data science, analytics, and user research. I hire, onboard, mentor, and build high-performing teams; I covered a key leave with no timeline slips and run culture screens on hiring panels."
+  - title: "Lead company strategy & rituals"
+    tag: "Runs the business review"
+    body: "Own the recurring company Business Review and board reporting; lead cross-team alignment on the strategy roadmap; designed and am currently leading the cross-org revenue offsite across Partnerships, Sales, Product, Engineering, Legal, and Research, aligning six functions on one revenue plan; built the shared OKR scorecard the org tracks progress on; and turn data into the revenue opportunities and market sizing the company invests behind."
+  - title: "Cultural center"
+    tag: "Promoted in under a year"
+    body: "Promoted within a year of joining, while new to crypto, and rated Exceeds Expectations. Leadership credits her with building the company's culture and connecting its partners, and with stepping up across teams through leadership transitions to keep the org aligned."
+home_highlight:
+  label: "How I lead"
+  lede: "I am on the leadership team: I run the company's rituals and hold its culture, not just its data and AI."
+  items:
+    - { h: "Cross-org revenue offsite", p: "Designed and currently leading a revenue offsite across Partnerships, Sales, Product, Engineering, Legal, and Research, aligning six functions on one revenue plan." }
+    - { h: "Cultural center", p: "Recognized by 7+ colleagues across 6 functions in a single quarter; convene the company's social rituals; chosen to represent the company externally." }
+  link_label: "More on how I lead and manage"
+  link_href: "/leadership"
+team_quotes_label: "From my team"
+team_quotes:
+  - "She gives us clear context and the desired output, plus the autonomy to own long-term work and grow; she has a good sense for when people are heading in the right direction."
+  - "She organized dedicated feedback sessions and retrospectives, an explicit space to discuss challenges openly. It built trust and noticeably improved how the team collaborated and performed."
+  - "She has encouraged me to step up in visible ways: sharing writing, leading team meetings, presenting in business reviews. My growth is clearly something she thinks about."
+  - "She entrusted me with high-priority initiatives and direct access to senior stakeholders, which built my confidence in high-stakes work."
+  - "Feedback I give gets re-said by exec members, so I can tell it gets passed on."
+closing: "I manage a fleet of specialized agents and a team of people the same disciplined way; that dual fluency is the through-line of how I work."
+operating_rigor:
+  lede: "I build operating systems, not tools. The agents are the easy part; the SOPs, audit trail, cost attribution, and guardrails are what make them trustworthy and repeatable."
+  items:
+    - { h: "SOPs + central index", p: "Standardized procedures per system, one index; repeatable bi-weekly, weekly, and monthly cycles." }
+    - { h: "Audit trail", p: "Every write logged; provenance tagging on every claim; in-place writes so links never break." }
+    - { h: "Human-in-the-loop", p: "Approve a readable diff, then write; no silent edits to systems of record." }
+    - { h: "Evals as a gate", p: "Static guards on every commit; behavioral evals regression-test real past failures and gate deploys." }
+    - { h: "Cost attribution", p: "Per-skill and per-surface attribution; modeled spend reductions; a self-corrected unit-economics reprice." }
+    - { h: "Access & safety", p: "Role-based tool filtering, admin-gated dashboards, fail-closed gating, privacy-by-design." }

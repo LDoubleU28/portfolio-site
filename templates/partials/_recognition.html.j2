@@ -1,0 +1,11 @@
+<div class="section" id="recognition">
+  <div class="h2">Recognition</div>
+  <div class="quotes">
+    {% for q in recognition %}
+    <div class="quote">
+      <div class="t">&ldquo;{{ q.text }}&rdquo;</div>
+      <div class="a">{{ q.attribution }}{% if q.slack_link %} &middot; <a href="{{ q.slack_link }}">Slack</a>{% endif %}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

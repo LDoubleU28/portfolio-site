@@ -1,0 +1,11 @@
+<div class="section" id="work">
+  <div class="h2">All work</div>
+  <table class="twork">
+    <thead><tr><th class="ty">Type</th><th class="pj">Project</th><th>Result</th></tr></thead>
+    <tbody>
+    {% for p in projects %}
+      <tr><td class="ty">{{ p.type }}</td><td class="pj">{% if p.link %}<a href="{{ p.link }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</td><td>{{ p.one_line }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>

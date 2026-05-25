@@ -1,0 +1,9 @@
+<div class="section">
+  <div class="h2">Operating rigor</div>
+  <div class="lede">{{ leadership.operating_rigor.lede }}</div>
+  <div class="rigor">
+    {% for it in leadership.operating_rigor['items'] %}
+    <div><div class="h">{{ it.h }}</div><div class="p">{{ it.p }}</div></div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,33 @@
+name: Lizzy Wong
+location: "New York, NY · Open to remote"
+employer_url: "https://www.optimism.io/"
+avatar: "/assets/img/headshot.jpg"
+nav:
+  - { label: "Work", href: "/" }
+  - { label: "Case Study", href: "/brain" }
+  - { label: "Leadership", href: "/leadership" }
+  - { label: "Experience", href: "/experience" }
+  - { label: "About", href: "/about" }
+hero_headline_pre: "I build data and AI functions from the ground up, and the "
+hero_headline_accent: "systems"
+hero_headline_post: " that run them."
+hero_paragraphs:
+  - "Head of Data and AI Product Leader at OP Labs, the team behind Optimism, the open-source infrastructure (the OP Stack) that powers major Layer 2 blockchains, including Coinbase's Base and Kraken's Ink: 30+ chains and $14B+ in assets. I built the data and AI function from zero across three disciplines, and ship the systems myself: agent systems on the Claude and MCP stack in daily use."
+  - "I lead both the people and the agents that run these functions, and I drive company strategy, business reviews, and board reporting. I stay close to the customer: the numbers tell me what is happening, the research tells me why."
+stack_line: "Building and leading data teams; the context infrastructure that puts LLMs to work; company operating systems; agents, MCP, and evals; AWS and GCP; BigQuery / Trino / Postgres / ClickHouse"
+stats:
+  - { n: "5+", k: "agent systems built" }
+  - { n: "0 to 1, twice", k: "built the data + AI function from zero (theSkimm, OP Labs)" }
+  - { n: "9 teams", k: "on the enterprise AI platform" }
+  - { n: "200+ hrs/wk", k: "saved across the teams the Brain serves, roughly five full-time roles" }
+track_line: "Built data and AI functions from zero twice, and worked across banking, consumer goods, media, and crypto. Previously VP, Data & Analytics and Interim CPO at theSkimm (10M+ subscribers); built analytics at Blue Apron through its NYSE IPO; advisory at EY; law-trained (LLM, University of Melbourne)."
+positioning: "Data, AI, and strategy executive. I build the function from zero, stand up the operating system around the agents, and lead the people who run it."
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/lizzy-wong/", type: "linkedin" }
+  - { label: "Email", url: "mailto:epwong28@gmail.com", type: "email" }
+design_principles:
+  lede: "Meet customers where they are."
+  items:
+    - { h: "Build on surfaces they already use", p: "Most companies now run on Slack; I treat it as the system of record and the interface, not a reason to stand up another tool." }
+    - { h: "Don't make people adopt a new surface", p: "Input and output happen in Slack and the docs and sheets teams already use, instead of a separate app people have to migrate to." }
+    - { h: "Close the loop in-surface", p: "Capture human feedback where the work happens, then ingest it to iterate and learn. The surface is both the interface and the data source." }

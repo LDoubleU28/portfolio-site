@@ -1,0 +1,48 @@
+{% extends "base.html.j2" %}
+{% block content %}
+{% set feat = (projects | selectattr('featured') | first) %}
+<section class="hero" id="top">
+  <h1>{{ profile.hero_headline_pre }}<span class="accent">{{ profile.hero_headline_accent }}</span>{{ profile.hero_headline_post }}</h1>
+  <div class="herotop">
+    <div class="herotext">
+      {% for para in profile.hero_paragraphs %}<p>{{ para }}</p>{% endfor %}
+      {% if profile.employer_url %}<p class="herolink"><a href="{{ profile.employer_url }}" target="_blank" rel="noopener">Learn about Optimism &#8599;</a></p>{% endif %}
+      <div class="track" style="border:none;padding-top:8px">{{ profile.stack_line }}</div>
+    </div>
+    {% if profile.avatar %}<img class="heroportrait" src="{{ profile.avatar }}" alt="{{ profile.name }}" />{% endif %}
+  </div>
+  <div class="stats">
+    {% for s in profile.stats %}<div class="stat"><div class="n">{{ s.n }}</div><div class="k">{{ s.k }}</div></div>{% endfor %}
+  </div>
+  <div class="track">{{ profile.track_line }}</div>
+</section>
+
+{% if feat %}
+<section class="section">
+  <div class="featcard"><div class="feat">
+    {% if case_brain and case_brain.loom %}
+    <div class="loomwrap" style="margin:0"><iframe src="{{ case_brain.loom }}" allowfullscreen></iframe></div>
+    {% else %}
+    <div class="featdiagram">
+      <div class="fdrow"><span class="fdchip">Slack</span><span class="fdchip">HubSpot</span><span class="fdchip">Notion</span><span class="fdchip">Drive</span><span class="fdchip">onchain</span></div>
+      <div class="fdarrow">&#8595;</div>
+      <div class="fdcore">The Brain &middot; MCP server</div>
+      <div class="fdarrow">&#8595;</div>
+      <div class="fdrow"><span class="fdchip fdclay">Slack agent</span><span class="fdchip fdclay">Claude Code</span><span class="fdchip fdclay">Reports</span></div>
+    </div>
+    {% endif %}
+    <div>
+      <div class="meta">{{ feat.meta or 'Selected work' }}</div>
+      <h3><span class="hl">{{ feat.name }}</span></h3>
+      <p>{{ feat.one_line }}</p>
+      <a class="readmore" href="/brain">Read the case study &rarr;</a>
+    </div>
+  </div></div>
+</section>
+{% endif %}
+
+{% include "partials/_work_table.html.j2" %}
+{% include "partials/_home_leadership.html.j2" %}
+{% include "partials/_principles.html.j2" %}
+{% include "partials/_recognition.html.j2" %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% if leadership and leadership.home_highlight %}
+{% set h = leadership.home_highlight %}
+<div class="section">
+  <div class="h2">{{ h.label }}</div>
+  <div class="lede">{{ h.lede }}</div>
+  <div class="ldgrid">
+    {% for it in h['items'] %}
+    <div><div class="h">{{ it.h }}</div><div class="p">{{ it.p }}</div></div>
+    {% endfor %}
+  </div>
+  {% if h.link_href %}<div style="margin-top:22px"><a class="readmore" href="{{ h.link_href }}">{{ h.link_label }} &rarr;</a></div>{% endif %}
+</div>
+{% endif %}
